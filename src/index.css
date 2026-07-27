@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-white font-sans overflow-x-hidden;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(10, 108, 255, 0.5);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(10, 108, 255, 0.4);
+}
