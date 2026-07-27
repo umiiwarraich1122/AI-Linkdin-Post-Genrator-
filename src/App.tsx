@@ -678,13 +678,13 @@ const Chatbot = ({ onNavigate }: { onNavigate: (view: 'landing' | 'chat') => voi
           style={{ backgroundImage: `url(${bgImage})` }}
         />
       )}
-      <div className="pt-24 pb-6 px-4 md:px-10 lg:px-12 h-screen w-full flex flex-col md:flex-row gap-6 lg:gap-8 relative">
+      <div className="pt-24 pb-6 px-4 md:px-10 lg:px-12 min-h-[100dvh] md:h-screen w-full flex flex-col md:flex-row gap-6 lg:gap-8 relative md:overflow-hidden">
         
         {/* Left Sidebar - Settings & Input */}
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="w-full md:w-[400px] lg:w-[450px] flex flex-col gap-4 shrink-0"
+          className="w-full md:w-[400px] lg:w-[450px] flex flex-col gap-4 shrink-0 md:overflow-y-auto md:pr-2 custom-scrollbar md:h-full pb-4 md:pb-0"
         >
           <button 
             onClick={() => onNavigate('landing')} 
@@ -778,7 +778,7 @@ const Chatbot = ({ onNavigate }: { onNavigate: (view: 'landing' | 'chat') => voi
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex-1 glass-card bg-black/40 border border-white/10 rounded-2xl p-4 md:p-8 shadow-xl flex flex-col relative overflow-hidden h-[calc(100vh-120px)] min-h-0"
+          className="flex-1 glass-card bg-black/40 border border-white/10 rounded-2xl p-4 md:p-8 shadow-xl flex flex-col relative overflow-hidden min-h-[600px] md:min-h-0 md:h-full"
         >
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-cyan-500 opacity-50"></div>
           
