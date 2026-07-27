@@ -6,7 +6,7 @@ load_dotenv()
 
 def get_llm():
     return ChatGroq(
-        api_key=os.getenv("GROQ_API_KEY"),
+        api_key=os.getenv("GROQ_API_KEY") or os.getenv("VITE_GROQ_API_KEY"),
         model="llama-3.3-70b-versatile",
         temperature=0.7,
         max_tokens=2048,
