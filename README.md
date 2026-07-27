@@ -22,22 +22,22 @@ It seamlessly combines a beautifully designed **React (Vite)** frontend Workspac
 ## 🛠️ Local Development
 
 ### 1. Backend Setup
+From the root of the project:
 ```bash
-cd api
 python -m venv venv
 # Activate venv:
 # Windows: .\venv\Scripts\activate
 # Mac/Linux: source venv/bin/activate
 
-pip install -r requirements.txt
+pip install -r api/requirements.txt
 ```
-Create a `.env` file in the `api` folder and add your Groq API key:
+Create a `.env` file in the root folder and add your Groq API key:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 Run the FastAPI server:
 ```bash
-uvicorn index:app --port 8000 --reload
+uvicorn api.index:app --port 8000 --reload
 ```
 
 ### 2. Frontend Setup

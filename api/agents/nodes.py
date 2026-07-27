@@ -1,6 +1,6 @@
 from langchain_core.messages import HumanMessage
 from .state import AgentState
-from services.llm_service import get_llm
+from api.services.llm_service import get_llm
 
 def plan_content(state: AgentState) -> AgentState:
     llm = get_llm()

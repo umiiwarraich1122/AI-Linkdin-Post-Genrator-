@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 
-from agents.graph import create_agent_graph
-from services.github_service import fetch_github_context
+from api.agents.graph import create_agent_graph
+from api.services.github_service import fetch_github_context
 
 app = FastAPI(title="NovaLink AI Backend")
 
